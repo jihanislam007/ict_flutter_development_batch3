@@ -14,6 +14,7 @@ class PageOne extends StatelessWidget {
       body: SafeArea(
           child: ListView(
             children: [
+
               Container(
                 height: 100,
                 color: Colors.brown,
@@ -22,6 +23,7 @@ class PageOne extends StatelessWidget {
                   style: TextStyle(color: Colors.white, fontSize: 24),
                 ),
               ),
+
               Container(
                 color: Colors.green,
                 height: 100,
@@ -31,8 +33,9 @@ class PageOne extends StatelessWidget {
                       style: TextStyle(color: Colors.white, fontSize: 24),
                     )),
               ),
+
               Align(
-                alignment: Alignment.centerRight,
+                alignment: Alignment.center,
                 child: Container(
                   height: 100,
                   width: 200,
@@ -88,7 +91,24 @@ class PageOne extends StatelessWidget {
 
               ElevatedButton(onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => OfflineImage()));
-              }, child: Text("offline Image Load"))
+              }, child: Text("offline Image Load")),
+
+              Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(width: 2.0,color: Colors.deepOrange)
+                  ),
+                  height: 200,
+                  //color: Colors.purple,
+                  child: IconButton(icon: Icon(Icons.account_balance,size: 100,),
+                  onPressed: (){
+                    print("Icon button pressed...");
+                  },),
+                ),
+              ),
+
+              SizedBox(height: 300,)
 
             ],
           )),
