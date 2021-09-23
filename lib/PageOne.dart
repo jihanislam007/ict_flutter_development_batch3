@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ict_flutter_development_batch3/RowColumn.dart';
 
 import 'ImageLoad.dart';
 import 'OflineImage.dart';
@@ -92,6 +93,10 @@ class PageOne extends StatelessWidget {
               ElevatedButton(onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => OfflineImage()));
               }, child: Text("offline Image Load")),
+
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => RowColumn()));
+              }, child: Text("Row column")),
 
               Padding(
                 padding: const EdgeInsets.all(18.0),
