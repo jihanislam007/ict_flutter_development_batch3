@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ict_flutter_development_batch3/RowColumn.dart';
 import 'package:ict_flutter_development_batch3/Stacks.dart';
 
+import 'Cards.dart';
+import 'Expandeds.dart';
 import 'ImageLoad.dart';
 import 'Listtiles.dart';
 import 'OflineImage.dart';
@@ -112,6 +114,17 @@ class PageOne extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => Stacks()));
               },
               child: Text("Stack")),
+
+
+          ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Expandeds()));
+          }, child: Text(" Expanded ")),
+
+          ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => cards()));
+          }, child: Text(" Card  ")),
+
+
           Padding(
             padding: const EdgeInsets.all(18.0),
             child: Container(
