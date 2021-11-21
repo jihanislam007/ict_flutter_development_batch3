@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ict_flutter_development_batch3/Gridviews.dart';
 import 'package:ict_flutter_development_batch3/RowColumn.dart';
 import 'package:ict_flutter_development_batch3/Stacks.dart';
 
@@ -8,11 +9,37 @@ import 'ImageLoad.dart';
 import 'Listtiles.dart';
 import 'OflineImage.dart';
 import 'SecondPage.dart';
+import 'calculator/calculator.dart';
+import 'flexibles.dart';
+import 'railSeba/rail.dart';
 
 class PageOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          children: [
+
+            UserAccountsDrawerHeader(accountName: Text("Name"), accountEmail: Text("Name@g.c"),),
+
+            ListTile(
+              leading: Icon(Icons.accessibility),
+              title: Text("Home"),
+            ),ListTile(
+              leading: Icon(Icons.accessibility),
+              title: Text("Home"),
+            ),ListTile(
+              leading: Icon(Icons.accessibility),
+              title: Text("Home"),
+            ),ListTile(
+              leading: Icon(Icons.accessibility),
+              title: Text("Home"),
+            ),
+
+          ],
+        ),
+      ),
       appBar: AppBar(
         title: Text("Batch -03"),
       ),
@@ -124,6 +151,29 @@ class PageOne extends StatelessWidget {
             Navigator.push(context, MaterialPageRoute(builder: (context) => cards()));
           }, child: Text(" Card  ")),
 
+
+          ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Gridviews()));
+          }, child: Text(" Grid view  ")),
+
+
+          ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Flexibles()));
+          }, child: Text(" Flexible  ")),
+
+
+
+          ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => rail()));
+          }, child: Text(" Rail ")),
+
+          Container(
+            height: 100,
+            color: Colors.purple,
+            child: ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => calculator()));
+            }, child: Text(" Calculator ")),
+          ),
 
           Padding(
             padding: const EdgeInsets.all(18.0),
