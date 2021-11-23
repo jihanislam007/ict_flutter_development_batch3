@@ -55,7 +55,7 @@ class _calculatorState extends State<calculator> {
       texttoDisplay = res;
       //texttoDisplay = operation;
     });
-
+    res= (firstnum/secondnum).toString();
   }
 
   @override
