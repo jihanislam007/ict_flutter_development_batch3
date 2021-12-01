@@ -31,6 +31,7 @@ dependencies:
   flutter_pdfview: ^1.2.1
   google_fonts: ^2.1.0
   hovering: ^1.0.4
+  flare_flutter: ^3.0.2
 
 dev_dependencies:
   flutter_test:
@@ -52,6 +53,7 @@ flutter:
   assets:
     - images/android.png
     - images/git.jpg
+    - animation/Teddy.flr
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
