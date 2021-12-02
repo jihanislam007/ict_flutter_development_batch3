@@ -1,7 +1,11 @@
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 
+import 'signup.dart';
+
 class login extends StatelessWidget {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,7 +69,11 @@ class login extends StatelessWidget {
               SizedBox(
                 height: 12,
               ),
-              Text('''haven't Account? Sign up''')
+              InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => signup()));
+                  },
+                  child: Text('''haven't Account? Sign up'''))
             ],
           ),
         ),
