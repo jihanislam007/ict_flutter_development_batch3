@@ -1,5 +1,6 @@
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
+import 'package:ict_flutter_development_batch3/Auth/profile.dart';
 
 import 'signup.dart';
 
@@ -51,7 +52,9 @@ class login extends StatelessWidget {
               Container(
                 alignment: Alignment.centerRight,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>profile()));
+                  },
                   child: Text('Forgot Password'),
                 ),
               ),
